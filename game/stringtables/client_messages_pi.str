@@ -1,0 +1,25 @@
+error_title						Blimey!
+error_unknown					Tarnation!
+
+disconnect_title				Thrown Overboard
+disconnect_not_host				Ye must be Cap'n to start yer game here.
+disconnect_server_full			the waves walk the deck, we're full up.
+disconnect_game_in_progress		Ye missed the boat.
+disconnect_server_error			ServerWench got hornswaggled.
+disconnect_not_invited			ServerWench sez dis is a private game, invitashuns only
+disconnect_no_cookie			ServerWench wants to know yer name before she'll let ye in.
+disconnect_auth_failed			The ServerWench hasn't heard of ye, what be yer name agin'?
+disconnect_unknown				man overboard
+disconnect_timeout				Ahoy! ServerWench's not responding
+disconnect_game_over			all hands 've been dealt
+disconnect_idle					the crew stuck to the code, ye fell behind
+disconnect_terminated			Ye've fallin down to oft'n, dry the grog out'n yer sails afore we let ye in ag'n
+disconnect_kicked				Cap'n put the blackspot on ye.
+
+rejected_invalid_request		Couldn't make out yer hail.
+rejected_empty_address			ServerWench can't tell where yer from.
+rejected_wrong_game				ServerWench is dealin' a different hand.
+rejected_wrong_version			ServerWench sez yer outdated.
+rejected_banned					ServerWench sez ye've been blacklisted.
+rejected_invalid_password		Wrong secret words
+rejected_server_error			ServerWench ran aground.

@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface onload="CreateInt('_menuFirstPlay', 1);  CreateInt('_main_upgrade_open'); CreateInt('_main_create_open');  CreateInt('_main_local_open');  CreateInt('_main_options_open');  CreateInt('_main_replay_open');" name="main">
+	<!-- Includes -->
+	<include file="/ui/ui_items.package"/>
+	<include file="game_setup.package"/>
+	<include file="player_stats.package"/>
+	<include file="main_create_account.package"/>
+
+	<trigger name="ShowMainMenu"/>
+	
+	<!-- Dynamic Textures -->
+	<texture file="/ui/icons/beginner.tga" />
+	<texture file="/ui/icons/general.tga" />
+	<texture file="/ui/icons/veteran.tga" />
+	
+	<texture file="/ui/icons/allheroes.tga" />
+	<texture file="/ui/icons/deathmatch.tga" />
+	<texture file="/ui/icons/easymode.tga" />
+	<texture file="/ui/icons/forcerandom.tga" />
+	<texture file="/ui/icons/invis.tga" />
+	<texture file="/ui/icons/more.tga" />
+	<texture file="/ui/icons/noleaver.tga" />
+	<texture file="/ui/icons/official.tga" />
+	<texture file="/ui/icons/official_2.tga" />
+	<texture file="/ui/icons/shuffleteams.tga" />
+	<texture file="/ui/icons/thumbs_up.tga" />
+	<texture file="/ui/icons/thumbs_down.tga" />
+	<texture file="/ui/icons/gm.tga" />
+	<texture file="/ui/icons/ingame.tga" />
+	<texture file="/ui/icons/ingame_2.tga" />
+	<texture file="/ui/icons/op.tga" />
+	<texture file="/ui/icons/s2.tga" />
+	
+	<!-- Main -->
+	<panel
+		name="main_panel"
+		width="177.7h" height="100h"
+		align="center"
+		color="black"
+		onshow="
+			Trigger('ShowMainMenu');
+			_main_upgrade_open = 0;
+			_main_create_open = 0;
+			_main_local_open = 0;	
+			_main_options_open = 0;
+			_main_replay_open = 0;
+			Call('right_widgets', 'SetX(\'72%\');');
+			Call('left_widgets', 'SetX(\'-72%\');');
+			HideGroup('main_button_effects');
+	
+		"
+		onhide=""
+	>
+		<!-- Background -->
+		<image name="battle_image" noclick="1" texture="/ui/mainmenu/battle.tga" visible="false" watch="ShowMainMenu" ontrigger="If(cg_menuTransitions and _menuFirstPlay, FadeIn(1700), SetVisible(true));"/>
+
+		<panel name="menu_effects" width="100w" align="center" visible="false" watch="ShowMainMenu" ontrigger="If(cg_menuTransitions and _menuFirstPlay, SleepWidget(1700, 'SetVisible(true);'), SetVisible(true));">
+			<panel width="60h" height="100h">
+				<modelpanel
+					noclick="true"
+					model="effects/mainmenu/right.mdf"
+					anim="idle"
+					effect="effects/mainmenu/legion.effect"
+					camerapos="0 100 0"
+					cameraangles="0 0 180"
+					camerafov="46"
+					modelangles="0 0 180"
+					modelpos="-20 0 0"
+					lookat="false"
+				/>
+			</panel>
+
+			<panel align="right" width="60h" height="100h">
+				<modelpanel
+					noclick="true"
+					model="effects/mainmenu/right.mdf"
+					anim="idle"
+					effect="effects/mainmenu/hell.effect"
+					camerapos="0 100 0"
+					cameraangles="0 0 180"
+					camerafov="46"
+					modelangles="0 0 0"
+					modelpos="20 0 0"
+					lookat="false"
+				/>
+			</panel>
+
+			<panel align="center" x="-30h" width="60h" height="100h">
+				<modelpanel
+					noclick="true"
+					model="effects/mainmenu/right.mdf"
+					anim="idle"
+					effect="effects/mainmenu/legion.effect"
+					camerapos="0 100 0"
+					cameraangles="0 0 180"
+					camerafov="46"
+					modelangles="0 0 0"
+					modelpos="20 0 0"
+					lookat="false"
+				/>
+			</panel>
+
+			<panel align="center" x="30h" width="60h" height="100h">
+				<modelpanel
+					noclick="true"
+					model="effects/mainmenu/right.mdf"
+					anim="idle"
+					effect="effects/mainmenu/hell.effect"
+					camerapos="0 100 0"
+					cameraangles="0 0 180"
+					camerafov="46"
+					modelangles="0 0 180"
+					modelpos="-20 0 0"
+					lookat="false"
+				/>
+			</panel>
+		</panel>
+
+		<image name="blackout" visible="false" noclick="1" color="1 1 1 1" texture="/ui/mainmenu/blackout.tga" watch="ShowMainMenu" ontrigger="If(cg_menuTransitions and _menuFirstPlay, SleepWidget(1700, 'SetVisible(true);'), SetVisible(true));"/>
+
+		<!-- Buttons -->
+		<panel y="0h" name="menu_button_pannel_bg" color="invisible" visible="0" valign="center" align="center" width="50h" height="75h" noclick="1" watch="ShowMainMenu" ontrigger="If(cg_menuTransitions and _menuFirstPlay, SleepWidget(1700, 'SetVisible(true);'), SetVisible(true));">
+			<panel y="1h" width="25h" height="12.5h" align="center">
+				<image  texture="/ui/mainmenu/button_bg_thing.tga"/>
+			</panel>
+			<panel y="13h" width="25h" height="12.5h" align="center">
+				<image  texture="/ui/mainmenu/button_bg_thing.tga"/>
+			</panel>
+			<panel y="24.9h" width="25h" height="12.5h" align="center">
+				<image  texture="/ui/mainmenu/button_bg_thing.tga"/>
+			</panel>
+
+			<panel y="36.8h" width="25h" height="12.5h" align="center">
+				<image  texture="/ui/mainmenu/button_bg_thing.tga"/>
+			</panel>
+
+			<panel visible="1" y="48.7h" width="25h" height="12.5h" align="center">
+				<image  texture="/ui/mainmenu/button_bg_thing.tga"/>
+			</panel>
+
+			<panel visible="1" y="60.6h" x="-0.41h" width="25h" height="16.5h" align="center">
+				<image  texture="/ui/mainmenu/button_bg_bottom.tga"/>
+			</panel>
+		</panel>
+
+		<panel x="-0.35h" y="6h" visible="false" name="menu_button_pannel"  color="invisible" valign="center" align="center" width="50h" height="75h" noclick="1" watch="ShowMainMenu" ontrigger="If(cg_menuTransitions and _menuFirstPlay, SleepWidget(1700, 'SetVisible(true);'), SetVisible(true));">
+			<!-- Play Online -->
+			<panel y=".9h" height="12.5h" noclick="1">
+				<instance
+					name="button3"
+					width="55%" height="33%"
+					align="center" valign="center"
+					font="dyn_14" label="main_button_play_online"
+					visible="false"
+					watch="LoginStatus"
+					ontrigger="SetVisible(param2);"
+					onclick="SetMainInterface('main_lobby');"
+				/>
+				<panel
+					width="58%" height="40%"
+					align="center" valign="center"
+					color="1 0 0 0"
+					noclick="true"
+					watch="LoginStatus"
+					ontrigger="SetVisible(param2);"
+				>
+
+				<!--
+				<modelpanel
+					noclick="true"
+					model="effects/mainmenu/right.mdf"
+					anim="idle"
+					effect="effects/mainmenu/legion_button.effect"
+					camerapos="63 0 0"
+					cameraangles="0 90 90"
+					camerafov="80"
+				/>
+				-->
+
+				</panel>
+
+				<instance
+					name="button3"
+					width="55%" height="33%"
+					align="center" valign="center"
+					font="dyn_14" label="main_button_need_login"
+					watch="LoginStatus"
+					ontrigger="SetVisible(!param2);"
+					enabled="false"
+				/>
+
+				<image texture="/ui/mainmenu/button_frame.tga" noclick="1"/>
+			</panel>
+
+			<!-- Local Game -->
+			<panel y="12.8h" height="12.5h" noclick="1">
+				<instance
+					name="button3"
+					button_name="main_local_game_button"
+					group="left_buttons"
+					width="55%" height="33%"
+					align="center" valign="center"
+					font="dyn_14" label="main_button_local_game"
+					onclick="
+						HideWidget('create_account');
+						ShowWidget('main_local_game_panel');
+						PlaySound('/shared/sounds/ui/menu/slide_on.wav');
+
+						Call('right_widgets', 'SlideX(\'72%\', 500);');
+						Call('left_widgets', 'SlideX(\'-72%\', 500);');
+
+						Call('left_widgets', 'SlideX(\'-26.8%\', 500);');
+						
+						If(_main_local_open, HideGroup('main_button_effects'), showonly('local_effect'));		
+						if(_main_local_open, Call('left_widgets', 'SlideX(\'-72%\', 500);'));				
+
+						_main_upgrade_open = 0;
+						_main_create_open = 0;
+						Toggle(_main_local_open);						
+						_main_options_open = 0;
+						_main_replay_open = 0;	
+					"
+					watch="LocalServerAvailable"
+					ontrigger="SetEnabled(param);"
+				/>
+			
+
+				<panel name="local_effect" group="main_button_effects" visible="0" noclick="1" x="0" y="2.9h"  width="35h" height="8h" color="invisible" align="center">
+					<modelpanel
+						noclick="1" 					
+						visible="1"					
+						model="common/models/main/button.mdf"
+						anim="idle"
+						camerapos="0 2800 0"
+						cameraangles="0 0 180"
+						camerafov="3.45"
+						cameranear="1"
+						carmerafar="7000"
+						depthclear="false"
+						depthcompress="true"			
+						sunazimuth="140"
+						sunaltitude="10"
+						suncolor="1.4 1.3 1"
+						onshow="SetEffect('/ui/common/models/main/button.effect'));"
+					/>	
+				</panel>	
+
+				<image texture="/ui/mainmenu/button_frame.tga" noclick="1"/>
+			</panel>
+			
+			
+
+			<!-- Options -->
+			<panel y="24.7h" height="12.5h" noclick="1">
+				<instance
+					name="button3"
+					button_name="main_options_button"
+					group="right_buttons"
+					width="55%" height="33%"
+					align="center" valign="center"
+					font="dyn_14" label="main_button_options"
+					onclick="
+						HideWidget('tos');
+						HideWidget('replay_viewer');
+						ShowWidget('Noptions');
+						PlaySound('/shared/sounds/ui/menu/slide_on.wav');
+						
+											
+					
+						Call('right_widgets', 'SlideX(\'72%\', 500);');
+						Call('left_widgets', 'SlideX(\'-72%\', 500);');
+					
+					
+					
+					
+						Call('right_widgets', 'SlideX(\'26.8%\', 500);');					
+					
+						
+						If(_main_options_open, HideGroup('main_button_effects'), showonly('options_effect'));							
+						if(_main_options_open, Call('right_widgets', 'SlideX(\'72%\', 500);'));				
+						
+						
+						
+						_main_upgrade_open = 0;
+						_main_create_open = 0;
+						Toggle(_main_options_open);						
+						_main_local_open = 0;
+						_main_replay_open = 0;						
+					
+					"
+				/>
+				
+				<panel name="options_effect" group="main_button_effects" visible="0" noclick="1" x="0" y="2.9h"  width="35h" height="8h" color="invisible" align="center">
+					<modelpanel
+						noclick="1" 					
+						visible="1"					
+						model="common/models/main/button.mdf"
+						anim="idle"
+						camerapos="0 2800 0"
+						cameraangles="0 0 180"
+						camerafov="3.45"
+						cameranear="1"
+						carmerafar="7000"
+						depthclear="false"
+						depthcompress="true"			
+						sunazimuth="140"
+						sunaltitude="10"
+						suncolor="1.4 1.3 1"
+						onshow="SetEffect('/ui/common/models/main/button.effect'));"
+					/>	
+				</panel>	
+
+
+				<image  texture="/ui/mainmenu/button_frame.tga" noclick="1"/>
+			</panel>
+			
+
+
+			<!-- Replay -->
+			<panel y="36.6h" height="12.5h" noclick="1">
+				<instance
+					name="button3"
+					button_name="main_replay_button"
+					group="right_buttons"
+					width="55%" height="33%"
+					align="center" valign="center"
+					font="dyn_14" label="main_button_view_replay"
+					onclick="
+						HideWidget('tos');
+						HideWidget('Noptions');
+						ShowWidget('replay_viewer');
+						PlaySound('/shared/sounds/ui/menu/slide_on.wav');
+												
+						Call('right_widgets', 'SlideX(\'72%\', 500);');
+						Call('left_widgets', 'SlideX(\'-72%\', 500);');
+						
+						Call('right_widgets', 'SlideX(\'26.8%\', 500);');
+						
+						If(_main_replay_open, HideGroup('main_button_effects'), showonly('replay_effect'));							
+						if(_main_replay_open, Call('right_widgets', 'SlideX(\'72%\', 500);'));				
+						
+						
+						_main_upgrade_open = 0;						
+						_main_create_open = 0;
+						Toggle(_main_replay_open);						
+						_main_local_open = 0;
+						_main_options_open = 0;							
+					
+					"
+					watch="LocalServerAvailable"
+					ontrigger="SetEnabled(param);"
+				/>
+				<panel name="replay_effect" group="main_button_effects" visible="0" noclick="1" x="0" y="2.9h"  width="35h" height="8h" color="invisible" align="center">
+					<modelpanel
+						noclick="1" 					
+						visible="1"					
+						model="common/models/main/button.mdf"
+						anim="idle"
+						camerapos="0 2800 0"
+						cameraangles="0 0 180"
+						camerafov="3.45"
+						cameranear="1"
+						carmerafar="7000"
+						depthclear="false"
+						depthcompress="true"			
+						sunazimuth="140"
+						sunaltitude="10"
+						suncolor="1.4 1.3 1"
+						onshow="SetEffect('/ui/common/models/main/button.effect'));"
+					/>	
+				</panel>					
+				
+				
+				<image texture="/ui/mainmenu/button_frame.tga" noclick="1"/>
+			</panel>
+
+			<!-- Quit -->
+			<panel y="48.5h" height="12.5h" noclick="1">
+				<instance width="55%"  height="33%" valign="center" name="button3" id="main_login_button5" align="center" font="dyn_14"
+					label="main_button_quit"
+					onclick="Call('main_blocker', 'FadeIn(250);'); Call('quit_confirm', 'FadeIn(250);');
+					
+					HideGroup('main_button_effects');
+					Call('right_widgets', 'SlideX(\'72%\', 500);');
+					Call('left_widgets', 'SlideX(\'-72%\', 500);');	
+
+					_main_upgrade_open = 0;
+					_main_create_open = 0;
+					_main_local_open = 0;
+					_main_options_open = 0;
+					_main_replay_open = 0;	
+					"
+				/>
+				<image texture="/ui/mainmenu/button_frame.tga" noclick="1"/>
+			</panel>
+		</panel>
+
+		<panel name="left_widgets" x="-72%" y="-0.4h" height="79h" width="91.83h" align="center" valign="center" color="invisible" noclick="1">
+			<image texture="/ui/mainmenu/main_left_frame.tga" noclick="1" />
+
+			<panel x="-17.2%" y="0.2h" width="47.6%" height="84%" align="right" valign="center" color="invisible" noclick="1">
+				<!-- Local Game -->
+				<include file="/ui/main_local_browser.package"/>
+
+				<!-- Create Account -->
+				<instance name="create_account_window"/>
+			</panel>
+		</panel>
+
+		<panel name="right_widgets" x="72%" y="-0.4h" height="79h" width="91.83h" align="center" valign="center" color="invisible" noclick="1">
+			<image texture="/ui/mainmenu/main_right_frame.tga" noclick="1" />
+
+			<panel x="17.2%" y="0.2h" width="47.6%" height="84%" align="left" valign="center" color="invisible" noclick="1">
+
+				<!-- Options -->
+				<include file="/ui/game_options.package"/>
+
+				<panel name="Noptions" valign="center" visible="0" noclick="1" color="invisible" onframe="OptionsFrame();" onshow="OptionsOpen();">
+					<instance name="no_frame" body="Noptions"
+						onclose="
+							PlaySound('/shared/sounds/ui/menu/slide_off.wav');
+							Call('main_options_button', 'SetEnabled(true);');
+							Call('right_widgets', 'SlideX(\'72%\', 500);');
+							_main_options_open = 0;
+							HideGroup('main_button_effects');
+							"
+					/>
+				</panel>
+
+				<!-- TOS -->
+				<include file="tos.package"/>
+
+				<!-- Replay Viewer -->
+				<include file="replay_viewer.package"/>
+
+			</panel>
+		</panel>
+
+		<!-- Overlays -->
+		<image name="battle_image_cover" visible="false" noclick="1"  texture="/ui/mainmenu/battle.tga" watch="ShowMainMenu"  ontrigger="If(cg_menuTransitions and _menuFirstPlay, SleepWidget(1700, 'SetVisible(true); SleepWidget(1000, \'FadeOut(1000);\');' ));"/>
+		<image name="main_blocker" visible="0" noclick="0" color="0 0 0 .7"/>
+
+		<!-- Top panel -->
+		<panel name="top_bar" noclick="1" height="25h" y="-25h" watch="ShowMainMenu" ontrigger="If(cg_menuTransitions and _menuFirstPlay, SleepWidget(1700, 'PlaySound(\'/shared/sounds/ui/menu/slide_top.wav\'); SlideY(0, 610);'), SetY(0));">
+			<!-- Log in button-->
+			<instance
+				name="button3"
+				button_name="main_login_button"
+				y="7.9h"
+				width="13h" height="3.1h"
+				align="center" valign="top"
+				font="dyn_14" label="main_button_login"
+				watch="LoginStatus"
+				ontrigger="SetVisible(!param2);"
+				onclick="Login(main_login_user, main_login_password);"				
+			/>
+
+			
+			
+			<!-- Create account button -->
+			<instance
+				name="button3"
+				button_name="main_create_account_button"
+				group="left_buttons"
+				y="13.7h"
+				width="23h" height="3.1h"
+				valign="top" align="center"
+				font="dyn_14" label="main_button_create_account"
+				watch="LoginStatus"
+				ontrigger="SetEnabled(!param2);"
+				onclick="
+						ShowWidget('create_account');
+						HideWidget('main_local_game_panel');
+						HideWidget('prime_upgrade_window');
+						PlaySound('/shared/sounds/ui/menu/slide_on.wav');
+						
+						Call('right_widgets', 'SlideX(\'72%\', 500);');
+						Call('left_widgets', 'SlideX(\'-72%\', 500);');					
+						
+						
+						Call('left_widgets', 'SlideX(\'-26.8%\', 500);');
+						
+						If(_main_create_open, HideGroup('main_button_effects'), showonly('create_effect'));		
+						if(_main_create_open, Call('left_widgets', 'SlideX(\'-72%\', 500);'));				
+						
+						
+						
+						
+						_main_upgrade_open = 0;
+						Toggle(_main_create_open);
+						_main_local_open = 0;
+						_main_options_open = 0;
+						_main_replay_open = 0;							
+						
+						"
+			/>
+			
+			<panel name="create_effect" group="main_button_effects" visible="0" noclick="1" x="-0.1h" y="11.5h"  width="35h" height="8h" color="invisible" align="center">
+				<modelpanel
+					noclick="1" 					
+					visible="1"					
+					model="common/models/main/button.mdf"
+					anim="idle"
+					camerapos="0 2800 0"
+					cameraangles="0 0 180"
+					camerafov="4.42"
+					cameranear="1"
+					carmerafar="7000"
+					depthclear="false"
+					depthcompress="true"			
+					sunazimuth="140"
+					sunaltitude="10"
+					suncolor="1.4 1.3 1"
+					onshow="SetEffect('/ui/common/models/main/button.effect'));"
+				/>	
+			</panel>			
+
+			<image y="0.6h" texture="/ui/mainmenu/top_bar_shadow.tga" noclick="1" />
+			<image texture="/ui/mainmenu/top_bar.tga" noclick="1" />
+
+			<!-- Username / Password -->
+			<panel y="2.8h" height="2.8h" align="center" width="45.8h">
+				<!-- User name -->
+				<label y="6.4h" x="-33.6%" width="28%" height="12%" align="center" color="white" shadow="1" textalign="center" textvalign="center" font="dyn_12" content="main_label_username"/>
+				<panel width="38.5%" color="1 0 0 0" >
+					<panel width="95%" height="84%" valign="center" align="center">
+						<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="#031128"/>
+						<frame texture="/ui/frames/roundframe.tga" color="#455166" borderthickness="0.5h"/>
+						<textbox
+							name="main_login_user"
+							y="0.24h"
+							width="-1.4h"
+							align="center"
+							textvalign="center"
+							valign="bottom"
+							taborder="1"
+							font="dyn_12"
+							color="invisible"
+							textcolor="1 .7 0 1"
+							maxlength="34"
+							watch="LoginStatus"
+							ontrigger="
+								SetEnabled(!StringEquals(param0, 'success'));
+								If(!StringEquals(param0, 'success'), SetTextColor('1 .7 0 1'), SetTextColor('0.5 .35 0 1'));
+								"
+							onchange="
+								If(account_rememberLogin, Set(account_username, this));
+								Call('main_login_button', 'SetEnabled(!StringEmpty(main_login_user) and !StringEmpty(main_login_password));');
+								"
+							onshow="
+								If(account_rememberLogin, SetFocusName('main_login_password'), SetFocus('true'));
+								If(account_rememberLogin, SetInputLine(account_username), EraseInputLine());
+								"
+							onenter="SetFocusName('main_login_password');"
+						/>
+					</panel>
+				</panel>
+
+				<!-- Password -->
+				<label y="6.4h" x="33.6%" width="28%" height="12%" align="center" color="white" shadow="1" textalign="center" textvalign="center" font="dyn_12" content="main_label_password"/>
+				<panel align="right" width="38.5%" color="invisible">
+					<panel width="95%" height="84%" valign="center" align="center">
+						<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="#031128"/>
+						<frame texture="/ui/frames/roundframe.tga" color="#455166" borderthickness="0.5h"/>
+						<textbox
+							y="0.24h"
+							width="-1.4h"
+							align="center"
+							name="main_login_password"
+							textvalign="center"
+							valign="bottom"
+							taborder="2"
+							font="dyn_12"
+							color="invisible"
+							textcolor="1 .7 0 1"
+							shadow="true"
+							maxlength="34"
+							passwordchar="*"
+							watch="LoginStatus"
+							ontrigger="
+								SetEnabled(!StringEquals(param0, 'success'));
+								If(!StringEquals(param0, 'success'), SetTextColor('1 .7 0 1'), SetTextColor('0.5 .35 0 1'));
+								"
+							onshow="
+								If(account_autoLogin, SetFocus('false'));
+								If(account_autoLogin, SetInputLine(account_password), EraseInputLine());								
+								"
+							onchange="
+								If(account_autoLogin, Set(account_password, this));
+								Call('main_login_button', 'SetEnabled(!StringEmpty(main_login_user) and !StringEmpty(main_login_password));');
+								"
+							onenter="
+								PlaySound('/shared/sounds/ui/button_click_02.wav');
+								SetFocus('false');
+								Login(main_login_user, main_login_password);
+								"
+							watch1="ShowMainMenu"
+							ontrigger1="If(account_autoLogin and !IsLoggedIn(), If(cg_menuTransitions and _menuFirstPlay, SleepWidget(4000, 'Login(main_login_user, main_login_password);'), Login(main_login_user, main_login_password)));"
+						/>
+					</panel>
+				</panel>
+			</panel>
+
+			<!-- Remember me / Auto login -->
+			<panel align="center" width="44.4h" height="1.8h" color="invisible" noclick="1">
+				<!-- Remember me -->
+				<panel width="18h" color="invisible" noclick="1">
+					<instance
+						name="main_login_checkbox"
+						align="left"
+						textoffset="3.2h"
+						image="rememberlogin_box"
+						font="dyn_9" label="main_checkbox_remember_me"
+						cvar="account_rememberLogin"
+						onclick="
+							If(account_rememberLogin, Set(account_username, main_login_user), Set(account_username, ''));
+							If(!account_rememberLogin, Set(account_password,  ''));
+							If(!account_rememberLogin, Set(account_autoLogin, false));
+							"
+					/>
+				</panel>
+				<!-- Auto Login -->
+				<panel width="18h" align="right" color="invisible" noclick="1">
+					<instance
+						name="main_login_checkbox"
+						align="right"
+						textoffset="-3.2h"
+						image="autologin_box"
+						font="dyn_9" label="main_checkbox_auto_login"
+						cvar="account_autoLogin"
+						onclick="
+							If(account_autoLogin, Set(account_password, main_login_password), Set(account_password, ''));
+							If(account_autoLogin, Set(account_rememberLogin, true));
+							If(account_autoLogin, Set(account_username, main_login_user));
+							"
+					/>
+				</panel>
+			</panel>
+
+			<!-- Login in progress -->
+			<panel name="main_status" width="88.8h" height="25h" visible="false" color="invisible" align="center" watch="LoginStatus" ontrigger="SetVisible(!StringEquals(param0, 'offline'));" noclick="1">
+				<panel width="47.8h" height="12.2h" align="center" color="black"/>
+				<image texture="/ui/mainmenu/top_cover.tga" noclick="1"/>
+				
+				<!-- Logged In Sucess -->
+				<panel name="main_logging_sucess" y="2.6h" width="44.4h" height="7.4h" align="center" color="invisible" noclick="1">
+					
+					
+					<!-- Account/Games Played Info -->
+					<panel height="100%" width="15.5h" align="right" color="invisible">
+						<frame texture="/ui/frames/tooltip_bg.tga" color="#2c4b6c" borderthickness=".6h" align="left" valign="top"/>
+						<frame texture="/ui/frames/roundframe.tga" color="#2c4b6c" borderthickness=".6h"/>
+						
+						<panel x="0.3h" width="-2.4h" height="-0.6h" align="center" valign="center" color="invisible" float="bottom" padding="0" noclick="1">
+							
+							<panel height="33%" color="invisible" noclick="1">								
+								<panel align="center">
+									<label width="47%" height="100%" color="#ffaa00" font="dyn_10" textalign="right" textvalign="center" noclick="1" content="main_label_account_level"/>
+									<label
+										height="100%"
+										width="50%"
+										align="right"
+										textvalign="center"
+										textalign="left"
+										color="white" font="dyn_9"
+										noclick="1"
+										watch="AccountInfo"
+										ontrigger="SetText(param3);"
+									/>
+								</panel>								
+							</panel>
+							
+							<panel height="33%" color="invisible" noclick="1">
+								<panel align="center">
+									<label width="47%" height="100%" color="#ffaa00" font="dyn_10" textalign="right" textvalign="center" noclick="1" content="main_label_games_played"/>
+									<label
+										height="100%"
+										width="50%"
+										align="right"
+										textvalign="center"
+										textalign="left"
+										color="white" font="dyn_9"
+										noclick="1"
+										watch="AccountInfo"
+										ontrigger="SetText(param4);"
+									/>
+								</panel>
+							</panel>
+							
+							<panel height="33%" color="invisible" noclick="1">
+								<panel align="center">
+									<label width="47%" height="100%" color="#ffaa00" font="dyn_10" textalign="right" textvalign="center" noclick="1" content="main_label_leaves"/>
+									<label
+										height="100%"
+										width="50%"
+										valign="center"
+										align="right"
+										textvalign="center"
+										textalign="left"
+										color="white" font="dyn_9"
+										noclick="0"
+										watch="AccountInfo"
+										ontrigger="SetText(param5);"
+									/>
+									<image
+										x="-0.8h"
+										width="2.5h"
+										height="2.5h"
+										align="right"
+										valign="center"
+										watch="AccountInfo"
+										ontrigger="SetTexture(If(param6, '/ui/icons/thumbs_down.tga', '/ui/icons/thumbs_up.tga'));"
+										texture="$invis" 
+										onmouseover="ShowWidget('leaver_info_tip');"
+										onmouseout="HideWidget('leaver_info_tip');"
+									/>									
+									<instance name="leaver_info_tip" width="25.0h" title="main_leaver_title" label="main_leaver_tip" />
+								</panel>
+							</panel>							
+						</panel>						
+					</panel>
+
+					<!-- Account name / Logout button -->
+					<panel height="100%" width="28h" align="left" color="invisible" noclick="1">
+						<frame texture="/ui/frames/tooltip_bg.tga" color="#2c4b6c" borderthickness=".6h" align="left" valign="top"/>
+						<frame texture="/ui/frames/roundframe.tga" color="#2c4b6c" borderthickness=".6h"/>
+
+						<panel height="4.0h" width="-2.0h" align="center" color="invisible" noclick="1" float="right">
+							<label fitx="true" fitxpadding="0.5h" height="100%" color="#ffaa00" font="dyn_12" textvalign="center" noclick="1" content="main_label_logged_in_as"/>						
+							<label height="100%" color="white" font="dyn_12" textvalign="center" noclick="1" watch="AccountInfo" ontrigger="SetText(param1);"/>
+						</panel>
+
+						<!-- Log out -->
+						<instance
+							name="button3"
+							y="-1.0h" x="1.0h"
+							width="12h" height="2.4h"
+							align="center" valign="bottom"
+							font="dyn_10" label="main_button_logout"
+							onclick="Logout();"
+						/>
+					</panel>
+				</panel>				
+				
+
+				<!-- Status / Login Failure -->
+				<panel name="main_logging_in" y="2.6h" width="45.0h" height="7.4h" align="center" visible="false" color="0 0 0 1" noclick="1" watch="LoginStatus" ontrigger="SetVisible(!StringEquals(param0, 'success'));">
+					<label
+						y="-1.0h"
+						width="100%" height="100%"
+						textalign="center" textvalign="center"
+						shadow="true" font="dyn_12" color="1 0.7 0 1"
+						noclick="true"
+						watch="LoginStatus"
+						ontrigger="
+							If(StringEquals(param0, 'waiting'), SetText(Translate('main_label_login_status_waiting')));
+							If(StringEquals(param0, 'waiting'), SetColor('1 0.7 0 1'));
+							If(StringEquals(param0, 'success'), SetText(Translate('main_label_login_status_success')));
+							If(StringEquals(param0, 'success'), SetColor('0.2 1.0 0.2 1'));
+							If(StringEquals(param0, 'failure'), SetText(Translate('main_label_login_status_failed', 'reason', param1)));
+							If(StringEquals(param0, 'failure'), SetColor('1.0 0.2 0.2 1'));
+							"
+					/>
+					<instance
+						name="button3"
+						width="13h" height="2.5h"
+						align="center" valign="bottom"
+						font="dyn_14" label="general_cancel"
+						watch="LoginStatus"
+						ontrigger="SetVisible(StringEquals(param0, 'waiting'));"
+						onclick="CancelLogin();"
+					/>
+
+					<instance
+						name="button3"
+						width="13h" height="2.5h"
+						align="center" valign="bottom"
+						font="dyn_14" label="general_ok"
+						watch="LoginStatus"
+						ontrigger="SetVisible(StringEquals(param0, 'failure'));"
+						onclick="HideWidget('main_status');"
+					/>
+				</panel>
+			</panel>
+
+			<!-- Update -->
+			<panel name="main_update" width="88.8h" height="25h" visible="false" color="invisible" align="center" noclick="1" watch="UpdateNeeded" ontrigger="SetVisible(param);">
+				<panel width="53.0h" height="11.5h" align="center" color="black"/>
+				<panel y="13.6h" width="21.8h" height="3.2h" align="center" valign="top" color="1 1 1 .4">
+
+					<image height="100%" texture="mainmenu/update_bar_bg.tga" />
+
+					<panel width="100%" height="100%" align="center">
+						<panel watch="UpdatePercent" ontrigger="SetVisible(param != 2); SetWidth(FtoP(param));">
+							<image watch="UpdatePercent" ontrigger="SetUScale(1 / param);" texture="mainmenu/update_bar_fg.tga"/>
+							<image width="32" texture="loadingscreens/loading_bar_fg_l.tga"/>
+							<image width="32" align="right" texture="loadingscreens/loading_bar_fg_r.tga"/>
+						</panel>
+					<label height="100%" width="100%" textvalign="center" textalign="center" shadow="true" font="dyn_12" color="1 1 1 1" noclick="1" watch="UpdatePercent" ontrigger="SetVisible(param != 2); SetText(Round(param * 100) # '%%');" />
+
+					</panel>
+				</panel>
+
+				<panel y="2.4h" width="44.4h" height="7.9h" align="center" color="invisible" noclick="1">
+					<frame texture="/ui/frames/tooltip_bg.tga" color="#2c4b6c" borderthickness=".6h" align="left" valign="top"/>
+					<frame texture="/ui/frames/roundframe.tga" color="#2c4b6c" borderthickness=".6h"/>
+
+					<panel x="0.5h" height="-1.0h" width="21.2h" valign="center" color="invisible">
+
+						<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="0 0 0 .2"/>
+						<frame texture="/ui/frames/roundframe.tga" color="#2c4b6c" borderthickness="0.5h"/>
+
+						<label y="0.5h" height="1.3h" width="100%" textvalign="center" textalign="center" shadow="true" font="dyn_12" color="#3abde7" noclick="1" watch="UpdateMessage" ontrigger="If(param == 1, SetText(Translate('main_label_update_calculating')), SetText(Translate('main_label_update_downloading')));" />
+
+						<label x="-0.4h" y="2.4h" height="1.1h" width="50%" textvalign="center" textalign="right" shadow="true" font="dyn_9" color="1 0.7 0 1" noclick="1" watch="UpdateLocalVersion" ontrigger="SetText(Translate('main_label_old_version', 'version', param));" />
+						<label x="0.4h" y="2.4h" height="1.1h" width="50%" textvalign="center" textalign="left" align="right" shadow="true" font="dyn_9" color="1 0.7 0 1" noclick="1" watch="UpdateCurVersion" ontrigger="SetText(Translate('main_label_new_version', 'version', param));" />
+
+						<instance
+							name="button3"
+							id="main_login_button"
+							y="4.2h"
+							width="13h"
+							height="2.2h"
+							valign="top"
+							align="center"
+							font="dyn_9"
+							label="general_cancel"
+							onclick="CancelUpdate();"
+						/>
+					</panel>
+
+					<panel x="-0.4h" width="21.5h" height="-0.8h" align="right" valign="center" color="invisible" noclick="true" passivechildren="true">
+						<label y="0.1h" height="1.1h" textvalign="center" shadow="true" font="dyn_9" color="1 0.7 0" watch="UpdateFilesLeft" ontrigger="SetText(Translate('main_label_update_files', 'count', param0, 'total', param1));" />
+						<label y="1.9h" height="1.1h" textvalign="center" shadow="true" font="dyn_9" color="1 0.7 0" watch="UpdateProgress" ontrigger="SetText(Translate('main_label_update_progress', 'count', param0, 'total', param1));" />
+						<label y="3.8h" height="1.1h" textvalign="center" shadow="true" font="dyn_9" color="1 0.7 0" watch="UpdateSpeed" ontrigger="SetText(Translate('main_label_update_speed', 'speed', param));" />
+						<label y="5.7h" height="1.1h" textvalign="center" shadow="true" font="dyn_9" color="1 0.7 0" watch="UpdateTime" ontrigger="SetText(Translate('main_label_update_time', 'time', param));" />
+					</panel>
+				</panel>
+
+				<image texture="/ui/mainmenu/top_cover.tga" noclick="1"/>
+
+			</panel>
+		</panel>
+
+		<panel
+			name="bottom_bar"
+			y="100h"
+			height="25h"
+			texture="/ui/mainmenu/bot_bar.tga"
+			noclick="true"
+			watch="ShowMainMenu"
+			ontrigger="
+				If(cg_menuTransitions and _menuFirstPlay,
+					SleepWidget(2200, 'PlaySound(\'/shared/sounds/ui/menu/slide_bottom.wav\'); SlideY(75h, 610);'),
+					SetY(75h)
+					);"
+		/>
+
+		<!-- Bottom Logo -->
+		<panel name="hon_logo" noclick="1" height="50h" width="50h" y="57.8h" align="center" color="invisible">
+			<image name="hon_logo_tga" color="1 1 1 1" noclick="1" texture="/ui/mainmenu/hon_logo.tga" visible="false" watch="ShowMainMenu" ontrigger="If(cg_menuTransitions and _menuFirstPlay, SleepWidget(3310, 'FadeIn(444); PlaySound(\'/shared/sounds/ui/menu/menu_fadein.wav\');'), SetVisible(true));"/>
+			<image name="hon_s2gamespresents" y="-6.0h" x="-0.42h" noclick="1" height="12.5h" valign="bottom" texture="/ui/mainmenu/s2gamespresents.tga" visible="false" watch9="ShowMainMenu" ontrigger9="If(cg_menuTransitions and _menuFirstPlay, SleepWidget(4310, 'FadeIn(444);'), SetVisible(true)); _menuFirstPlay = 0;"/>
+		</panel>
+	</panel>
+
+	<!-- Quit Confirm -->
+	<template name="quit_buttons">
+		<instance
+			name="button2"
+			x="-6.0h"
+			width="10.0h" height="2.4h"
+			align="center"
+			valign="center"
+			label="general_cancel"
+			onclick="Call('main_blocker', 'FadeOut(250);'); Call('quit_confirm', 'FadeOut(250);');"
+		/>
+
+		<instance
+			name="button2"
+			x="6.0h"
+			width="10.0h" height="2.4h"
+			align="center"
+			valign="center"
+			label="main_button_quit"
+			onclick="PlaySound('/shared/sounds/ui/quit.wav'); SleepWidget(1000, 'Quit();');"
+		/>
+	</template>
+	<panel name="quit_confirm" visible="0" blockinput="true">
+		<instance
+			name="alert_box"
+			width="26.0h"
+			height="8.0h"
+			align="center"
+			label="main_quit_confirm"
+			show_close="true"
+			closebtn_click="Call('main_blocker', 'FadeOut(250);'); Call('quit_confirm', 'FadeOut(250);"
+			body="quit_buttons"
+		/>
+	</panel>
+	
+	<template name="language">
+		<panel
+			width="12%" height="12@"
+			valign="center"
+			texture="{texture}"
+			rendermode="{rendermode=normal}"
+			onclick="If(!{disabled=false}, SetLanguage('{code}'));"
+			onmouseover="ShowWidget('language_tooltip'); Call('language_tooltip_label', 'SetText(\'{tooltip}\');');"
+			onmouseout="HideWidget('language_tooltip');"
+		/>
+	</template>
+	
+	<panel x="-6.0h" y="-1.4h" width="28h" height="3.4h" align="right" valign="bottom" color="invisible" visible="true">
+		<frame texture="/ui/frames/tooltip_bg.tga" color="0 0 0 .8" borderthickness=".6h" align="left" valign="top" noclick="1"/>
+		<frame texture="/ui/frames/roundframe.tga" color="#A0A0A0" borderthickness=".6h" noclick="1"/>	
+		<panel x="0.3h" y="0.5h" width="-1.0h" align="center" float="right" padding="2.25%">
+			<instance name="language" code="en" texture="/ui/elements/flag_uk.tga" tooltip="English"/>
+			<instance name="language" code="fr" texture="/ui/elements/flag_france.tga" tooltip="Français (French)"/>
+			<instance name="language" code="es" texture="/ui/elements/flag_spain.tga" tooltip="Español (Spanish)"/>
+			<instance name="language" code="de" texture="/ui/elements/flag_germany.tga" tooltip="Deutsch (German)"/>
+			<instance name="language" code="ru" texture="/ui/elements/flag_russia.tga" tooltip="Russkiy yazyk (Russian)"/>
+			<instance name="language" code="zh" texture="/ui/elements/flag_china.tga" tooltip="Chinese (coming soon...)" disabled="true" rendermode="grayscale"/>
+			<instance name="language" code="ko" texture="/ui/elements/flag_korea.tga" tooltip="Korean (coming soon...)" disabled="true" rendermode="grayscale"/>
+			<!-- <instance name="language" code="pi" texture="/ui/elements/flag_pirate.tga" tooltip="ARR! (Pirate)"/>-->
+		</panel>
+	</panel>
+
+	<floater name="language_tooltip" visible="false" grow="true" color="invisible" align="center" valign="bottom" y="-1.2h">			
+		<frame texture="/ui/frames/tooltip_bg.tga" color="0 0 0 .8" borderthickness=".6h" align="left" valign="top" noclick="1"/>
+		<frame texture="/ui/frames/roundframe.tga" color="#A0A0A0" borderthickness=".6h" noclick="1"/>
+		<label
+			name="language_tooltip_label"
+			textalign="center" textvalign="center"
+			fitx="true" fity="true"
+			fitxpadding="1.0h" fitypadding="0.8h"
+			color="white" font="dyn_10"
+		/>
+	</floater>
+</interface>
+

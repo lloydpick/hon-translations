@@ -1,0 +1,170 @@
+error_title						Error
+error_unknown					Error desconocido.
+
+disconnect_title				Desconectado
+disconnect_not_host				Debes ser anfitrión para comenzar una partida en este servidor.
+disconnect_server_full			El servidor está lleno.
+disconnect_game_in_progress		La partida a la que intentas unirte ya está en curso.
+disconnect_server_error			Error de servidor.
+disconnect_not_invited			No has sido invitado a unirte a esta partida privada.
+disconnect_no_cookie			Debes identificarte para jugar en este servidor.
+disconnect_auth_failed			El servidor no ha autorizado tu cuenta. Vuelve a intentar identificarte.
+disconnect_unknown				Has sido desconectado.
+disconnect_timeout				Sin respuesta del servidor.
+disconnect_game_over			La partida ha terminado.
+disconnect_idle					Has sido desconectado por estar ausente.
+disconnect_terminated			Has superado el tiempo máximo de desconexión y ya no puedes volver a unirte a esta partida.
+disconnect_kicked				Has sido expulsado de la partida por el anfitrión.
+
+rejected_invalid_request		Tu cliente ha enviado una petición de conexión no válida.
+rejected_empty_address			El servidor no ha podido determinar tu dirección.
+rejected_wrong_game				Este servidor está ejecutando una partida distinta.
+rejected_wrong_version			Tu versión no coincide con la del servidor.
+rejected_banned					Tienes prohibida la entrada en este servidor.
+rejected_invalid_password		Contraseña no válida.
+rejected_server_error			Error de servidor.
+
+// chat system messages
+chat_connecting					^900* Conectando al servidor de chat...
+chat_reconnecting				^900* Conectando al servidor de chat... (Attempt {attempt} of {maxattempts})
+chat_waiting_verification			^900* Esperando a que el servidor de chat verifique identidad...
+chat_connected					^900* ¡Conectado!
+chat_disconnected				^900* Desconectado del servidor de chat.
+chat_reconnecting_delay				^900* Reconectando en 30 segundos (Attempt {attempt} of {maxattempts}).
+chat_not_connected				^900* No estás conectado al servidor de chat.
+chat_new_channel				^900* Hablando ahora en canal ^090{channel}^900.
+chat_channel_message				^990{sender}:^888 {message}
+chat_channel_message_sent			^444"{name}:^* {message}
+chat_whisper					^099(Whisper from {sender}) ^888{message}
+chat_whisper_sent				^066(Whispered to {target}) ^888{message}
+chat_whisper_buddies				^099<Susurrado a compañeros> {message}
+chat_whisper_failed_self			^900* No puedes susurrarte a ti mismo.
+chat_user_offline				^900* Ese jugador no está conectado.
+chat_im						^882{sender}: ^888{message}
+chat_im_sent					^444{name}: ^888{message}
+chat_im_failed					^900* {target} no está conectado.
+chat_clan_whisper				^359(Clan) {name}: ^888{message}
+chat_clan_whisper_sent				^458(Clan) {name}: ^888{message}
+chat_clan_whisper_failed			^900* No estás en ningún clan.
+chat_clan_im					^359{name}: ^888{message}
+chat_clan_im_sent				^458{name}: ^888{message}
+chat_flooding					^900* Mensaje no enviado - Estás enviando demasiados mensajes. Espera unos segundos y vuelve a intentarlo.
+chat_max_channels				^900* No puedes unirte a más canales en este momento, sal de uno antes.
+chat_banned					^900* Desconectado - Has sido expulsado del servidor de chat durante {time} minutos.
+chat_banned_connections				^900* Razón: Demasiados intentos de conexión.
+chat_banned_flooding				^900* Razón: Saturación.
+chat_banned_unknown				^900* Razón: Desconocida.
+chat_banned_reconnect				^900* Intentando reconexión (Attempt {attempt} of {maxattempts}) en {time} segundos."
+chat_info_not_found				^900* El usuario '{name}' no se ha encontrado.
+chat_info_offline				^900* {name} está desconectado ahora, visto la última vez en {seen}.
+chat_info_online_no_channels			^900* {name} está conectado ahora pero en ningún canal.
+chat_info_online_one_channel			^900* {name} está conectado ahora y en el canal '{channel}'.
+chat_info_online_multi_channels			^900* {name} está conectado ahora y en los siguientes canales: {channels}
+chat_info_in_game				^900* {name} está conectado ahora y en la partida '{game}'.
+chat_ignored					^900* {name} está siendo ignorado.
+chat_unignored					^900* {name} ya no está siendo ignorado.
+chat_joining_game				^900* Unirse a partida '{name}'.
+chat_left_game					^900* Has abandonado la partida.
+chat_user_info_online				^900* ^990{name}^900 está conectado ahora.
+chat_user_info_offline				^900* ^990{name}^900 está desconectado ahora.
+chat_user_info_in_game				^900* ^990{name}^900 está ahora en la partida '{game}'.
+chat_adding_buddy				^900* Añadiendo a {name} como compañero...
+chat_failed_buddy_add				^900* Error al añadir a {target} a tu lista de amigos.
+chat_failed_buddy_add_self			^900* No puedes añadirte a ti mismo como amigo.
+chat_failed_buddy_add_duplicate			^900* No puedes añadirte a ti mismo como amigo.
+chat_failed_buddy_add_reason			^900* Error al añadir a {target} a tu lista de amigos: {reason}
+chat_failed_buddy_remove			^900* Error al eliminar a {target} de tu lista de amigos.
+chat_failed_buddy_remove_not_found		^900* Error al quitar al usuario de tu lista de amigos: Usuario no encontrado.
+chat_clan_promoting				^900* Ascendiendo al miembro del clan {name} a oficial...
+chat_failed_clan_promote			^900* Error al ascender {target}.
+chat_failed_clan_promote_cannot_promote		^900* No puedes ascender a ese usuario.
+chat_failed_clan_promote_generic		^900* Error al ascender al usuario.
+chat_clan_demoting				^900* Degradando al miembro del clan {name}...
+chat_failed_clan_demote				^900* Error al degradar {target}.
+chat_failed_clan_demote_cannot_demote		^900* No puedes degradar a ese usuario.
+chat_failed_clan_demote_generic			^900* Error al degradar al usuario.
+chat_clan_removing				^900* Eliminando miembro del clan {name}...
+chat_failed_clan_remove				^900* Error al eliminar a {target} del clan.
+chat_failed_clan_remove_demote			^900* Ese usuario debe ser degradado antes de eliminarlo.
+chat_failed_clan_remove_generic			^900* Error al eliminar al usuario del clan.
+chat_success_buddy_add				^900* Añadido {target} a tu lista de amigos.
+chat_success_buddy_remove			^900* Eliminado {target} de tu lista de amigos.
+chat_success_clan_promote			^900* Usuario ascendido con éxito.
+chat_success_clan_demote			^900* Usuario degradado con éxito.
+chat_success_clan_remove			^900* Usuario eliminado del clan.
+
+// chat notifications
+chat_notification_cc_panel			Pulsa F6 para abrir el Cuadro de Comunidad & Clan Panel.
+chat_notification_buddy_online			{name} está conectado.
+chat_notification_buddy_offline			{name} está desconectado.
+chat_notification_buddy_joined_game		{name} se ha unido a la partida '{game}'.
+chat_notification_buddy_left_game		{name} ha abandonado la partida '{game}'.
+chat_notification_clan_online			{name} está conectado.
+chat_notification_clan_offline			{name} está desconectado.
+chat_notification_clan_joined_game		{name} se ha unido a la partida '{game}'.
+chat_notification_clan_left_game		{name} ha abandonado la partida '{game}'.
+chat_notification_clan_whisper			(Clan) {name}: {message}
+chat_notification_clan_whisper_sent		(Clan) {name}: {message}
+
+// chat commands
+chat_command_whisper				/susurro
+chat_command_whisper_short			/w
+chat_command_whisper_help			^900*^505 /susurro <nombre> <mensaje>.
+chat_command_reply				/contestar
+chat_command_reply_short			/r
+chat_command_reply_invalid			^900* ¡Nadie te ha susurrado!
+chat_command_reply_help				^900*^505 /contestar <mensaje>.
+chat_command_buddy				/amigo
+chat_command_buddy_short			/b
+chat_command_buddy_list				lista
+chat_command_buddy_list_short			l
+chat_command_buddy_list_message			^900* Listando amigos...
+chat_command_buddy_list_none			^900* No hay usuarios en tu lista de amigos.
+chat_command_buddy_list_help			^900*^505 /lista de amigos.
+chat_command_buddy_message			mensaje
+chat_command_buddy_message_short		m
+chat_command_buddy_message_help			^900*^505 /mensaje de amigo <mensaje>.
+chat_command_buddy_add				añadir
+chat_command_buddy_add_short			a
+chat_command_buddy_add_help			^900*^505 /añadir amigo <nick>.
+chat_command_buddy_delete			borrar
+chat_command_buddy_delete_short			b
+chat_command_buddy_delete_help			^900*^505 /borrar amigo <nick>.
+chat_command_clan				/clan
+chat_command_clan_short				/c
+chat_command_clan_list				lista
+chat_command_clan_list_short			l
+chat_command_clan_list_message			^900* Listando miembros del clan...
+chat_command_clan_list_none			^900* No hay usuarios en tu clan.
+chat_command_clan_list_help			^900*^505 /lista del clan.
+chat_command_clan_message			mensaje
+chat_command_clan_message_short			m
+chat_command_clan_message_help			^900*^505 /mensaje del clan <mensaje>.
+chat_command_clear				/limpiar
+chat_command_clear_short			/cl
+chat_command_join				/unirse
+chat_command_join_short				/u
+chat_command_invite				/invitar
+chat_command_invite_short			/i
+chat_command_invite_help			^900*^505 /invitar <usuario>.
+chat_command_ignore				/ignorar
+chat_command_ignore_help			^900*^505 /ignorar <usuario>.
+chat_command_unignore				/no ignorar
+chat_command_unignore_help			^900*^505 /no ignorar <usuario>.
+chat_command_help				/ayuda
+chat_command_help_short				/h
+chat_command_character				/
+chat_command_invalid_format			^900* formato de comando no válido. El formato correcto es:
+chat_command_invalid_format_multi		^900* Formato de comando no válido. El formato correcto es uno de:
+chat_command_invalid_command			^900* Comando no válido. Teclea {helpcommand} para ver la lista de comandos.
+chat_command_help_valid				^900* Los comandos válidos son:
+chat_command_help_whisper			^900*^505 /susurrar <nickname> <mensaje>^900  -Susurra a un usuario.
+chat_command_help_reply				^900*^505 /contestar <mensaje>^900               -Contesta al último susurro.
+chat_command_help_buddy				^900*^505 /amigo <comando> <argumentos>^900   -Comandos varios relativos a los amigos.
+chat_command_help_clan				^900*^505 /clan <comando> <argumentos>^900    -Comandos varios relativos al clan.
+chat_command_help_join				^900*^505 /unirse <canal>^900                -Unirse al canal especificado.
+chat_command_help_ignore			^900*^505 /ignorar <usuario>^900                 -Ignorar al usuario especificado.
+chat_command_help_unignore			^900*^505 /no ignorar <usuario>^900               -No ignorar al usuario especificado.
+chat_command_help_clear				^900*^505 /limpiar^900                         -Limpia el buffer del chat.
+chat_command_help_invite			^900*^505 /invitar <usuario>^900                 -Invitar al usuario especificado a la presente partida.
+chat_command_help_misc				^900* Teclea cualquier comando sin parámetros para ver información sobre su uso.

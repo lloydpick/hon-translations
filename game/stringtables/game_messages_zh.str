@@ -1,0 +1,216 @@
+kill0								{killer_color}{killer}^* 杀死了 {victim_color}{victim}^*！ 赢得 ^y{gold}^* 金币！！
+kill1								{killer_color}{killer}^* 杀死了 {victim_color}{victim}^*！ 赢得 ^y{gold}^* 金币！！ 援助：{assist0_color}{assist0}
+kill2								{killer_color}{killer}^* 杀死了 {victim_color}{victim}^*！ 赢得 ^y{gold}^* 金币！！ 援助：{assist0_color}{assist0}^*、{assist1_color}{assist1}
+kill3								{killer_color}{killer}^* 杀死了 {victim_color}{victim}^*！ 赢得 ^y{gold}^* 金币！！ 援助：{assist0_color}{assist0}^*、{assist1_color}{assist1}^*、{assist2_color}{assist2}
+kill4								{killer_color}{killer}^* 杀死了 {victim_color}{victim}^*！ 赢得 ^y{gold}^* 金币！！ 援助：{assist0_color}{assist0}^*、{assist1_color}{assist1}^*、{assist2_color}{assist2}^*、{assist3_color}{assist3}
+first_kill							{killer_color}{killer}^* 已陷入 ^r疯狂^*！ （^y+{gold}^* 金币！）
+killstreak0							{killer_color}{killer}^* 是 ^082连环杀手^*！
+killstreak1							{killer_color}{killer}^* 是 ^204终极战士^*！
+killstreak2							{killer_color}{killer}^* 是 ^808传奇^*!
+killstreak3							{killer_color}{killer}^* 正在进行^840猛攻^*！
+killstreak4							{killer_color}{killer}^* 是 ^440野蛮人^*！！
+killstreak5							{killer_color}{killer}^* 是 ^848主宰^*！！
+killstreak6							{killer_color}{killer}^* 是 ^800纽沃斯勇士^*！！！
+killstreak7							{killer_color}{killer}^* 正在进行 ^840大屠杀^*！！ 某人已将他击杀！
+
+streakend0							{killer} 终结了 {victim} 的 ^082连环杀手^* 的连杀，赢得 ^y{gold}^* 金币！！
+streakend1							{killer} 终结了 {victim} 的 ^204终极勇士^* 的连杀，赢得 ^y{gold}^* 金币！！
+streakend2							{killer} 终结了 {victim} 的 ^808传奇^* 的连杀，赢得 ^y{gold}^* 金币！！
+streakend3							{killer} 终结了 {victim} 的^840猛攻^* 的连杀，赢得 ^y{gold}^* 金币！！
+streakend4							{killer} 终结了 {victim} 的 ^440野蛮人^* 的连杀，赢得 ^y{gold}^* 金币！！
+streakend5							{killer} 终结了 {victim} 的 ^840主宰^* 的连杀，赢得 ^y{gold}^* 金币！！
+streakend6							{killer} 终结了 {victim} 的 ^800纽沃斯勇士^* 的连杀，赢得 ^y{gold}^* 金币！！
+streakend7							{killer} 终结了 {victim} 的 ^840大屠杀^* 的连杀，赢得 ^y{gold}^* 金币！！
+
+multikill0							{killer} 达成 ^008双枪速射^*！
+multikill1							{killer} 达成 ^084帽子戏法^*！！！
+
+killtower							{killer} 摧毁了一座塔。 {reward} 赢得 ^y{gold}^* 额外金币！
+denytower							{player} 已 ^444抢先摧毁^* 了一座塔！
+killcourier							{victim} 的信使已被 {killer} 击杀！
+
+teamkillstreak0						某人连杀了 5 个英雄！！！
+teamkillstreak1						^r军团^* ^r连杀了 5 个英雄！！！^*
+teamkillstreak2						^170地狱族^* ^170连杀 5 个英雄！！！^*
+
+teamwipe							{team} 已完全被消灭！！！ 
+
+teamkill							{killer} 杀死了 {victim}！！ 丢失了 ^y{gold}^* 金币。
+
+neutralkill							{victim} 已被中立部队击杀。
+kongorkill							{victim} 已被 Kongor 击杀。
+
+suicide								{victim} 自杀了！
+
+kill								{victim} 已经死亡。
+
+teamkilltower						{killer} 摧毁了一座塔。 {killer} 赢得 ^y{gold}^* 额外金币！
+teamdenytower						{denier} ^444抢先摧毁^* 了一座塔。
+
+killkongor							{killer} 击杀了 Kongor。 {reward} 赢得 ^y{gold}^* 额外金币！
+teamkillkongor						{killer} 击杀了 Kongor。 {killer} 赢得 ^y{gold}^* 额外金币！
+
+share0								{player} 不再与您分享对其单位的控制权。
+share1								{player} 正与您分享对其单位的控制权。
+share2								{player} 正与您分享对其信使的控制权。
+share3								{player} 正与您分享对其单位的控制权。
+
+powerup								{player} 捡起了 ^r{powerup}^*
+
+creepupgrade						部队变得更加强大……
+megacreeps							{killer} 摧毁了 {victim} 所有单位的生产建筑。 {killer} 现在拥有超级部队。
+
+smackdown							{victim} 已被 {killer} 击溃！
+humiliation							{killer} 羞辱了 {victim}！
+nemesis								{killer} 完全连杀了 {victim} 的 5 个英雄！
+retribution							{killer} 受到了 {victim} 还击！
+
+client_connected					{player_color}{player}^* 已连接。
+client_reconnected					{player_color}{player}^* 已重新连接。 （剩余断开连接时间：{time}）
+client_disconnected					{player_color}{player}^* 已断开连接。
+client_terminated					{player_color}{player}^* 已被终止。 他们的英雄已被消灭，财产将被分配给其队伍。
+
+hero_pick							{player_color}{player}^* 选择了 ^885{hero_name}^*。
+hero_random							{player_color}{player}^* 随机选择了 ^885{hero_name}^*。
+hero_repick							{player_color}{player}^* 正在进行重新选择。 ^885{hero_name}^* 现在可用。
+hero_swap							{player_color}{player}^* 与 {player2_color}{player2}^* 交换了英雄。
+hero_swap_request					{player_color}{player}^* 提出与您交换英雄。
+
+player_ready						{player_color}{player}^* 已 ^g就绪^*。
+player_unready						{player_color}{player}^* ^r尚未就绪^*。
+
+error_target_invulnerable			目标处于无敌状态。
+error_not_ready						{tool} 尚未就绪。
+error_low_mana						法力值不足，无法使用 {tool}。
+error_no_proxy						无可供 {tool} 使用的替代单位。
+error_not_unit_ability				必须指定一个具备此技能的单位。
+error_not_unit_item					必须指定一个拥有此物品的单位。
+error_not_unit						必须指定一个单位。
+error_invalid_target				这不是一个有效目标。
+
+chat_all							^269[ALL] {color}{player}：^*{message}
+chat_team							^y[TEAM] {color}{player}：^*{message}
+server_message						^188[SERVER] ^y服务器消息：{message}
+
+error_item_unavailable				{item} 在此处不可用。
+error_low_gold_item					无法购买 {item}。
+error_low_gold_recipe				无法购买 {item}。
+
+str_bonus							{value} 力量
+str_bonus_per_level					{value_per_level} 每级力量
+str_bonus_per_charge				{value_per_charge} 每层力量
+agi_bonus							{value} 敏捷
+agi_bonus_per_level					{value_per_level} 每级敏捷
+agi_bonus_per_charge				{value_per_charge} 每层敏捷
+int_bonus							{value} 智力
+int_bonus_per_level					{value_per_level} 每级智力
+int_bonus_per_charge				{value_per_charge} 每层智力
+max_health_bonus					{value} 生命值上限
+max_health_mult_bonus				{value}%% 生命值上限
+max_mana_bonus						{value} 法力值上限
+max_mana_mult_bonus					{value}%% 法力值上限
+base_damage_mult_bonus				{value}%% 基础伤害
+damage_bonus						{value} 伤害
+move_speed_bonus					{value} 移动速度
+move_speed_mult_bonus				{value}%% 移动速度
+move_speed_mult_bonus_per_charge	{value}%% 每层移动速度
+move_speed_slow_bonus				{value}%% 移动降低
+move_speed_slow_bonus_per_charge	{value}%% 每层移动降低
+attack_speed_bonus					{value} 攻击速度
+attack_speed_bonus_per_charge		{value} 每层攻击速度
+cast_speed_bonus					{value} 施法速度
+armor_bonus							{value} 护甲值
+armor_bonus_per_charge				{value} 每层护甲值
+magic_armor_bonus					{value} 魔法护甲值
+magic_armor_bonus_per_charge		{value} 每层魔法护甲值
+health_regen_percent_bonus			{value}%% 每秒生命
+health_regen_bonus					{value} 生命值回复
+health_regen_mult_bonus				{value}%% 生命值回复
+mana_regen_percent_bonus			{value}%% 每秒法力
+mana_regen_bonus					{value} 法力值回复
+mana_regen_mult_bonus				{value}%% 法力值回复
+deflection_bonus					有 {value1}%% 几率格挡 {value2} 攻击伤害
+evasion_bonus						{value}%% 闪避
+ranged_evasion_bonus				{value}%% 远程闪避
+melee_evasion_bonus					{value}%% 近战闪避
+miss_chance_bonus					{value}%% 未命中几率
+lifesteal_bonus						{value}%% 生命吸取
+critical_bonus						有 {value1}%% 几率发动 {value2}x 致命一击
+incoming_damage_mult_bonus			{value}%% 承受伤害
+debuff_duration_mult_bonus			{value}%% 减益魔法持续时间
+heal_mult_bonus						{value}%% 受到的治疗
+silenced_bonus						沉默
+perplexed_bonus						迷惑
+disarmed_bonus						缴械
+immobilized_bonus					定身
+revealed_bonus						显现
+reveal_bonus						{value} 显现范围
+stealth_bonus						潜行带有 {value} 秒递减时间
+unitwalking_bonus					单位移动
+immunity_bonus						{type} 免疫
+invulnerable_bonus					无敌
+dispel_on_damage_bonus				驱散伤害
+dispel_on_action_bonus				驱散行动
+
+script_on_attack					攻击
+script_on_attack_impact				攻击命中
+script_on_attacked_pre_impact		受到攻击
+script_on_attacked_post_impact		受到攻击
+script_on_activate_pre_impact		激活
+script_on_activate_impact			激活
+script_on_ability_impact			激活技能
+script_on_damage					造成伤害
+script_on_damaged					受到伤害
+script_on_kill						击杀
+script_on_killed					被击杀
+
+action_toggle						切换
+action_no_target					
+action_target_position				目标位置
+action_target_unit					目标单位
+action_target_global				全局
+action_target_self					自身
+action_facing						面向
+action_self_position				自身位置
+action_attack						攻击
+
+ability_levelup_max					^g最高级别^*
+ability_levelup_available			^y单击以提高此技能级别^*
+ability_levelup_unavailable			^r未达到要求^*
+
+aura_range_global					全局
+
+item_recipe							{name} 配方
+
+activate_ability					单击以激活此技能
+activate_item						单击以激活此物品
+activate_item_no_share				^r已禁用 - 由 {name} 持有。
+activate_item_borrowed				^g借自 
+activate_passive					^g此技能为被动
+
+attribute_strength					力量
+attribute_agility					敏捷
+attribute_intelligence				智力
+
+attribute_damage_bonus				{value} 伤害
+attribute_health_bonus				{value} 生命值上限
+attribute_health_regen_bonus		{value} 生命值回复
+attribute_attack_speed_bonus		{value} 攻击速度
+attribute_armor_bonus				{value} 护甲值
+attribute_mana_bonus				{value} 法力值上限
+attribute_mana_regen_bonus			{value} 法力值回复
+
+auto_assemble						自动
+
+shop_action_view_recipe				^y单击以查看此配方
+shop_action_view_item				^y单击以查看此物品
+shop_action_auto_assemble			^y此物品将自动装备
+shop_action_already_purchased		^g已拥有此物品
+shop_action_cannot_shop				^r此单位无法携带物品
+shop_action_cannot_afford_item		^r无法购买此物品
+shop_action_cannot_afford_recipe	^r无法购买此配方
+shop_action_purchase_item			^y单击以购买此物品
+shop_action_purchase_recipe			^y单击以购买此配方
+shop_action_unavailable				^r在此处不可用
+
+// END

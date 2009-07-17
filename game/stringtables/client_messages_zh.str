@@ -1,0 +1,170 @@
+error_title						错误
+error_unknown					未知错误。
+
+disconnect_title				未连接
+disconnect_not_host				您必须具有主机特权才能在此服务器上开始游戏。
+disconnect_server_full			服务器已满。
+disconnect_game_in_progress		您尝试加入的游戏正在进行中。
+disconnect_server_error			服务器错误。
+disconnect_not_invited			您没有收到加入此私人游戏的邀请。
+disconnect_no_cookie			您必须先登录才能在此服务器上游戏。
+disconnect_auth_failed			服务器无法对您的帐户进行授权。 请重新尝试登录。
+disconnect_unknown				您已断开连接。
+disconnect_timeout				服务器没有响应。
+disconnect_game_over			游戏已结束。
+disconnect_idle					由于处于空闲状态，您已断开连接。
+disconnect_terminated			您已超出最大断开连接时间，不再允许重新加入此游戏。
+disconnect_kicked				您已被主机踢出此游戏。
+
+rejected_invalid_request		您的客户端发送的连接请求无效。
+rejected_empty_address			服务器无法确定您的地址。
+rejected_wrong_game				此服务器正在运行另一个游戏。
+rejected_wrong_version			您的版本与服务器版本不匹配。
+rejected_banned					您被禁止进入此服务器。
+rejected_invalid_password		密码无效。
+rejected_server_error			服务器错误。
+
+// chat system messages
+chat_connecting					^900* 正在连接到聊天服务器...
+chat_reconnecting				^900* 正在连接到聊天服务器...（第 {attempt} 次尝试，共 {maxattempts} 次尝试）
+chat_waiting_verification			^900* 正在等待聊天服务器验证身份...
+chat_connected					^900* 已连接！
+chat_disconnected				^900* 已断开与聊天服务器的连接。
+chat_reconnecting_delay				^900* 在 30 秒后重新连接（第 {attempt} 次尝试，共 {maxattempts} 次尝试）。
+chat_not_connected				^900* 您还未连接到聊天服务器。
+chat_new_channel				^900* 现在正在频道 ^090{channel}^900 中对话。
+chat_channel_message				^990{sender}：^888 {message}
+chat_channel_message_sent			^444"{name}：^* {message}
+chat_whisper					^099（来自 {sender} 的密谈）^888{message}
+chat_whisper_sent				^066（与 {target} 密谈）^888{message}
+chat_whisper_buddies				^099<与好友密谈> {message}
+chat_whisper_failed_self			^900* 您无法与自己密谈。
+chat_user_offline				^900* 该玩家不在线。
+chat_im						^882{sender}：^888{message}
+chat_im_sent					^444{name}：^888{message}
+chat_im_failed					^900* {target} 不在线。
+chat_clan_whisper				^359（派系）{name}：^888{message}
+chat_clan_whisper_sent				^458（派系）{name}：^888{message}
+chat_clan_whisper_failed			^900* 您不属于任何派系。
+chat_clan_im					^359{name}：^888{message}
+chat_clan_im_sent				^458{name}：^888{message}
+chat_flooding					^900* 消息未发送 - 您发送的消息太多。 请稍等几秒并重试。
+chat_max_channels				^900* 此时您不能加入更多频道，请首先退出另一个频道。
+chat_banned					^900* 未连接 - 您被禁止进入此聊天服务器 {time} 分钟。
+chat_banned_connections				^900* 原因：连接尝试太多。
+chat_banned_flooding				^900* 原因：游戏人数太多。
+chat_banned_unknown				^900* 原因：未知。
+chat_banned_reconnect				^900* 正在尝试在 {time} 秒内重新连接（第 {attempt} 次尝试，共 {maxattempts} 次尝试）。"
+chat_info_not_found				^900* 未找到用户“{name}”。
+chat_info_offline				^900* {name} 当前离线，最后一次是在 {seen} 被看到。
+chat_info_online_no_channels			^900* {name} 当前在线但不在任何频道中。
+chat_info_online_one_channel			^900* {name} 当前在线并在频道“{channel}”中。
+chat_info_online_multi_channels			^900* {name} 当前在线并在以下频道中：{channels}
+chat_info_in_game				^900* {name} 当前在线并在“{game}”游戏中。
+chat_ignored					^900* {name} 已被忽略。
+chat_unignored					^900* {name} 不再被忽略。
+chat_joining_game				^900* 加入游戏“{name}”。
+chat_left_game					^900* 您已离开游戏。
+chat_user_info_online				^900* ^990{name}^900 当前在线。
+chat_user_info_offline				^900* ^990{name}^900 当前离线。
+chat_user_info_in_game				^900* ^990{name}^900 当前正在“'{game}”游戏中。
+chat_adding_buddy				^900* 将 {name} 添加为好友...
+chat_failed_buddy_add				^900* 无法将 {target} 添加到您的好友列表。
+chat_failed_buddy_add_self			^900* 您不能将自己添加为好友。
+chat_failed_buddy_add_duplicate			^900* 您不能将自己添加为好友。
+chat_failed_buddy_add_reason			^900* 无法将 {target} 添加到您的好友列表：{reason}
+chat_failed_buddy_remove			^900* 无法将 {target} 从您的好友列表中删除。
+chat_failed_buddy_remove_not_found		^900* 无法将用户从您的好友列表中删除：未找到用户。
+chat_clan_promoting				^900* 将派系成员 {name} 晋升为官员...
+chat_failed_clan_promote			^900* 无法晋升 {target}。
+chat_failed_clan_promote_cannot_promote		^900* 您不能晋升此用户。
+chat_failed_clan_promote_generic		^900* 无法晋升用户。
+chat_clan_demoting				^900* 降低派系成员 {name} 的级别...
+chat_failed_clan_demote				^900* 无法降低 {target} 的级别。
+chat_failed_clan_demote_cannot_demote		^900* 您不能降低此用户的级别。
+chat_failed_clan_demote_generic			^900* 无法降低用户的级别。
+chat_clan_removing				^900* 删除派系成员 {name}...
+chat_failed_clan_remove				^900* 无法从派系中删除 {target}。
+chat_failed_clan_remove_demote			^900* 在删除此用户前必须降低其级别。
+chat_failed_clan_remove_generic			^900* 无法从派系中删除用户。
+chat_success_buddy_add				^900* 已将 {target} 添加到您的好友列表。
+chat_success_buddy_remove			^900* 已将 {target} 从您的好友列表中删除。
+chat_success_clan_promote			^900* 已成功晋升用户。
+chat_success_clan_demote			^900* 已成功降低用户的级别。
+chat_success_clan_remove			^900* 已将用户从派系中删除。
+
+// chat notifications
+chat_notification_cc_panel			按 F6 以打开“社区和派系”面板。
+chat_notification_buddy_online			{name} 在线。
+chat_notification_buddy_offline			{name} 离线。
+chat_notification_buddy_joined_game		{name} 已加入游戏“{game}”。
+chat_notification_buddy_left_game		{name} 已离开游戏“{game}”。
+chat_notification_clan_online			{name} 在线。
+chat_notification_clan_offline			{name} 离线。
+chat_notification_clan_joined_game		{name} 已加入游戏“{game}”。
+chat_notification_clan_left_game		{name} 已离开游戏“{game}”。
+chat_notification_clan_whisper			（派系）{name}：{message}
+chat_notification_clan_whisper_sent		（派系）{name}：{message}
+
+// chat commands
+chat_command_whisper				/密谈
+chat_command_whisper_short			/w
+chat_command_whisper_help			^900*^505 /密谈 <名称> <消息>。
+chat_command_reply				/答复
+chat_command_reply_short			/r
+chat_command_reply_invalid			^900* 没有人与您密谈！
+chat_command_reply_help				^900*^505 /答复 <消息>。
+chat_command_buddy				/好友
+chat_command_buddy_short			/b
+chat_command_buddy_list				列表
+chat_command_buddy_list_short			l
+chat_command_buddy_list_message			^900* 正在列出好友...
+chat_command_buddy_list_none			^900* 您的好友列表中没有用户。
+chat_command_buddy_list_help			^900*^505 /好友列表。
+chat_command_buddy_message			消息
+chat_command_buddy_message_short		m
+chat_command_buddy_message_help			^900*^505 /好友消息 <消息>。
+chat_command_buddy_add				添加
+chat_command_buddy_add_short			a
+chat_command_buddy_add_help			^900*^505 /添加好友 <昵称>。
+chat_command_buddy_delete			删除
+chat_command_buddy_delete_short			d
+chat_command_buddy_delete_help			^900*^505 /删除好友 <昵称>。
+chat_command_clan				/派系
+chat_command_clan_short				/c
+chat_command_clan_list				列表
+chat_command_clan_list_short			l
+chat_command_clan_list_message			^900* 正在列出派系成员...
+chat_command_clan_list_none			^900* 您的派系中没有用户。
+chat_command_clan_list_help			^900*^505 /派系列表。
+chat_command_clan_message			消息
+chat_command_clan_message_short			m
+chat_command_clan_message_help			^900*^505 /派系消息 <消息>。
+chat_command_clear				/清除
+chat_command_clear_short			/cl
+chat_command_join				/加入
+chat_command_join_short				/j
+chat_command_invite				/邀请
+chat_command_invite_short			/i
+chat_command_invite_help			^900*^505 /邀请 <用户>。
+chat_command_ignore				/忽略
+chat_command_ignore_help			^900*^505 /忽略 <用户>。
+chat_command_unignore				/取消忽略
+chat_command_unignore_help			^900*^505 /取消忽略 <用户>。
+chat_command_help				/帮助
+chat_command_help_short				/h
+chat_command_character				/
+chat_command_invalid_format			^900* 命令格式无效。 正确格式为：
+chat_command_invalid_format_multi		^900* 命令格式无效。 正确格式为以下格式之一：
+chat_command_invalid_command			^900* 命令无效。 键入 {helpcommand} 以获得命令列表。
+chat_command_help_valid				^900* 有效命令包括：
+chat_command_help_whisper			^900*^505 /密谈 <昵称> <消息>^900 - 与用户密谈。
+chat_command_help_reply				^900*^505 /答复 <消息>^900               - 答复上一个密谈人。
+chat_command_help_buddy				^900*^505 /好友 <命令> <变量>^900   - 各种与好友相关的命令。
+chat_command_help_clan				^900*^505 /派系 <命令> <变量>^900    - 各种与派系相关的命令。
+chat_command_help_join				^900*^505 /加入 <频道>^900                - 加入指定频道。
+chat_command_help_ignore			^900*^505 /忽略 <用户>^900                 - 忽略指定用户。
+chat_command_help_unignore			^900*^505 /取消忽略 <用户>^900               - 取消忽略指定用户。
+chat_command_help_clear				^900*^505 /清除^900                         - 清除聊天缓冲。
+chat_command_help_invite			^900*^505 /邀请 <用户>^900                 - 邀请指定用户加入当前游戏。
+chat_command_help_misc				^900* 键入不带变量的命令以获得其使用方法信息。

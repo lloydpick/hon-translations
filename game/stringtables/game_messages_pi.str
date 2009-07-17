@@ -1,0 +1,207 @@
+kill0								{killer_color}{killer}^* scuttled {victim_color}{victim}^*! for ^y{gold}^* doubloons!!
+kill1								{killer_color}{killer}^* sank {victim_color}{victim}^*! for ^y{gold}^* pieces 'o eight!! Assist: {assist0_color}{assist0}
+kill2								{killer_color}{killer}^* smashed {victim_color}{victim}^*! for ^y{gold}^* doubloons!! Assists: {assist0_color}{assist0}^*, {assist1_color}{assist1}
+kill3								{killer_color}{killer}^* scuppered {victim_color}{victim}^*! for ^y{gold}^* pieces 'o eight!! Assists: {assist0_color}{assist0}^*, {assist1_color}{assist1}^*, {assist2_color}{assist2}
+kill4								{killer_color}{killer}^* scuttled {victim_color}{victim}^*! for ^y{gold}^* doubloons!! Assists: {assist0_color}{assist0}^*, {assist1_color}{assist1}^*, {assist2_color}{assist2}^*, {assist3_color}{assist3}
+first_kill							{killer_color}{killer}^* has ^rbloodlust^*! (^y+{gold}^* doubloons!)
+killstreak0							{killer_color}{killer}^* be a ^082serial killer^*!
+killstreak1							{killer_color}{killer}^* be an ^204ultimate warrior^*!
+killstreak2							{killer_color}{killer}^* be ^808legendary^*!
+killstreak3							{killer_color}{killer}^* be on an ^840onslaught^*!
+killstreak4							{killer_color}{killer}^* be ^440savage sick^*!!
+killstreak5							{killer_color}{killer}^* be ^848dominating^*!!
+killstreak6							{killer_color}{killer}^* be a ^800CHAMPION OF NEWERTH^*!!!
+killstreak7							{killer_color}{killer}^* be on a ^840BLOODBATH^*!! Someone KILL HIM!
+
+streakend0							{killer} just belayed {victim}'s ^082serial killer^* streak for ^y{gold}^* doubloons!!
+streakend1							{killer} just belayed {victim}'s ^204ultimate warrior^* streak for ^y{gold}^* pieces 'o eight!!
+streakend2							{killer} just belayed {victim}'s ^808legendary^* streak for ^y{gold}^* doubloons!!
+streakend3							{killer} just belayed {victim}'s ^840onslaught^* streak for ^y{gold}^* pieces 'o eight!!
+streakend4							{killer} just belayed {victim}'s ^440savage sick^* streak for ^y{gold}^* doubloons!!
+streakend5							{killer} just belayed {victim}'s ^848domination^* streak for ^y{gold}^* pieces 'o eight!!
+streakend6							{killer} just belayed {victim}'s ^800CHAMPION OF NEWERTH^* streak for ^y{gold}^* doubloons!!
+streakend7							{killer} just belayed {victim}'s ^840BLOODBATH^* streak for ^y{gold}^* pieces 'o eight!!
+
+multikill0							{killer} just got a ^008Double Tap^*!
+multikill1							{killer} just got a ^084Hat-trick^*!!!
+
+killtower							{killer} has pillaged a tower. {reward} are awarded ^y{gold}^* bonus pieces 'o eight!
+denytower							{player} has ^444denied^* a tower!
+killcourier							{victim}'s monkey has been murdered by {killer}!
+
+teamkillstreak0						Someone be OWNING!!!
+teamkillstreak1						^rThe Legion^* ARRRRR ^rOWNING!!!^*
+teamkillstreak2						^170The Hellbourne^* ARRRR ^170OWNING!!!^*
+
+teamwipe							{team} shown no quarter!!! 
+
+teamkill							{killer} scuttled {victim}'s head!! ^y{gold}^* doubloons are split.
+
+neutralkill							{victim} be killed by Neutral Creeps.
+kongorkill							{victim} crushed to crab pulp by Kongor.
+
+suicide								{victim} danced the hempen jig!
+
+kill								{victim} sleeps wit' the fishes.
+
+teamkilltower						{killer} pillaged a tower. {killer} are awarded ^y{gold}^* bonus doubloons!
+teamdenytower						{denier} have ^444denied^* a tower!
+
+killkongor							{killer} made Kongor walk the plank. {reward} are awarded ^y{gold}^* bonus doubloons!
+teamkillkongor						{killer} keelhauled Kongor. {killer} are awarded ^y{gold}^* bonus doubloons!
+
+share0								{player} wouldn't trust ye with his monkey, bucko!
+share1								{player} sez: "me hearty, what's mine is yours"
+share2								{player} sez ye 'n his monkey will get on handsomely
+share3								{player} sez you can share the helm. 
+
+powerup								{player} looted a ^r{powerup}^*
+
+creepupgrade						the bilge sucking sea dogs have smartened up a tad...
+megacreeps							{killer} pillaged all {victim}'s squib sheltering hovel's . {killer} now has long toothed Salty SeaDogs.
+
+smackdown							{victim} be SMACKED DOWN by {killer}!
+humiliation							{killer} just HUMILIATED {victim}!
+nemesis								{killer} be completely OWNING {victim}!
+retribution							{killer} has gained RETRIBUTION against {victim}!
+
+client_connected					{player_color}{player}^* came aboard.
+client_reconnected					{player_color}{player}^* climbed back aboard. (Remaining fallin off da boat time: {time})
+client_disconnected					{player_color}{player}^* fell overboard.
+client_terminated					{player_color}{player}^* fell behind. Their figurehead be removed and the crew splits their duffle.
+
+error_target_invulnerable			Ye can't so much as bleedin touch it.
+error_not_ready						{tool} 'taint ready yet, ye son of a bisquit eater.
+error_low_mana						Ya squiffy dog ye need more mana to use {tool}.
+error_no_proxy						No available proxy for {tool}.
+error_not_unit_ability				Be ye addled? Choose a mark.
+error_not_unit_item					Choose a Jack Tar to crimp.
+error_not_unit						Choose a Mark, ya poxied dog.
+error_invalid_target				This not be a true target. Get your sea legs on matey!
+
+chat_all							^269[ALL] {color}{player}: ^*{message}
+chat_team							^y[TEAM] {color}{player}: ^*{message}
+server_message						^188[SERVER] ^yServer Message: {message}
+
+error_item_unavailable				{item} 'taint at dis shop ye numskull.
+error_low_gold_item					yer too poor {item}.
+error_low_gold_recipe				yer too poor {item}.
+
+str_bonus							{value} Strength
+str_bonus_per_level					{value_per_level} Strength per level
+str_bonus_per_charge				{value_per_charge} Strength per charge
+agi_bonus							{value} Agility
+agi_bonus_per_level					{value_per_level} Agility per level
+agi_bonus_per_charge				{value_per_charge} Agility per charge
+int_bonus							{value} Intelligence
+int_bonus_per_level					{value_per_level} Intelligence per level
+int_bonus_per_charge				{value_per_charge} Intelligence per charge
+max_health_bonus					{value} Max Health
+max_health_mult_bonus				{value}%% Max Health
+max_mana_bonus						{value} Max Mana
+max_mana_mult_bonus					{value}%% Max Mana
+base_damage_mult_bonus				{value}%% Base Damage
+damage_bonus						{value} Damage
+move_speed_bonus					{value} Movement Speed
+move_speed_mult_bonus				{value}%% Movement Speed
+move_speed_mult_bonus_per_charge	{value}%% Movement Speed per charge
+move_speed_slow_bonus				{value}%% Movement Slow
+move_speed_slow_bonus_per_charge	{value}%% Movement Slow per charge
+attack_speed_bonus					{value} Attack Speed
+attack_speed_bonus_per_charge		{value} Attack Speed per charge
+cast_speed_bonus					{value} Cast Speed
+armor_bonus							{value} Armor
+armor_bonus_per_charge				{value} Armor per charge
+magic_armor_bonus					{value} Magic Armor
+magic_armor_bonus_per_charge		{value} Magic Armor per charge
+health_regen_percent_bonus			{value}%% Health per second
+health_regen_bonus					{value} Health Regeneration
+health_regen_mult_bonus				{value}%% Health Regeneration
+mana_regen_percent_bonus			{value}%% Mana per second
+mana_regen_bonus					{value} Mana Regeneration
+mana_regen_mult_bonus				{value}%% Mana Regeneration
+deflection_bonus					{value1}%% chance to block {value2} attack damage
+evasion_bonus						{value}%% Evasion
+ranged_evasion_bonus				{value}%% Ranged Evasion
+melee_evasion_bonus					{value}%% Melee Evasion
+miss_chance_bonus					{value}%% Miss Chance
+lifesteal_bonus						{value}%% Lifesteal
+critical_bonus						{value1}%% chance for {value2}x Critical Strike
+incoming_damage_mult_bonus			{value}%% Damage taken
+debuff_duration_mult_bonus			{value}%% Debuff durations
+heal_mult_bonus						{value}%% Healing received
+silenced_bonus						Silenced
+perplexed_bonus						Perplexed
+disarmed_bonus						Disarmed
+immobilized_bonus					Immobilized
+revealed_bonus						Revealed
+reveal_bonus						{value} Reveal
+stealth_bonus						Stealth with {time} second fade time
+unitwalking_bonus					Unitwalking
+immunity_bonus						{type} Immunity
+invulnerable_bonus					Invulnerable
+dispel_on_damage_bonus				Dispel on damage
+dispel_on_action_bonus				Dispel on action
+
+script_on_attack					On Attack
+script_on_attack_impact				On Attack Impact
+script_on_attacked_pre_impact		On Attacked
+script_on_attacked_post_impact		On Attacked
+script_on_activate_pre_impact		On Activation
+script_on_activate_impact			On Activation
+script_on_ability_impact			On Ability Activation
+script_on_damage					On Deal Damage
+script_on_damaged					On Damaged
+script_on_kill						On Kill
+script_on_killed					On Killed
+
+action_toggle						Toggle
+action_no_target					
+action_target_position				Target Position
+action_target_unit					Target Unit
+action_target_global				Global
+action_target_self					Self
+action_facing						Facing
+action_self_position				Self Position
+action_attack						Attack
+
+ability_levelup_max					^gye know 'tall^*
+ability_levelup_available			^ylearn' it^*
+ability_levelup_unavailable			^ryer to green boy^*
+
+aura_range_global					Global
+
+item_recipe							{name} Recipe
+
+activate_ability					Click ta do it
+activate_item						Click ta use it
+activate_item_no_share				^rDisabled - Owned by {name}
+activate_item_borrowed				^g"Borrowing" (heh) from 
+activate_passive					^gdis ability is do itself
+
+attribute_strength					Strength
+attribute_agility					Agility
+attribute_intelligence				Intelligence
+
+attribute_damage_bonus				{value} Damage
+attribute_health_bonus				{value} Max Health
+attribute_health_regen_bonus		{value} Health Regeneration
+attribute_attack_speed_bonus		{value} Attack Speed
+attribute_armor_bonus				{value} Armor
+attribute_mana_bonus				{value} Max Mana
+attribute_mana_regen_bonus			{value} Mana Regeneration
+
+auto_assemble						Auto
+
+shop_action_view_recipe				^yClick to spy dese ingredients
+shop_action_view_item				^yClick to peruse dis t'ing
+shop_action_auto_assemble			^yDis t'ing builds itself
+shop_action_already_purchased		^gThis t'ing be owned already
+shop_action_cannot_shop				^rThis blaggard cannot hold a tune let alone an item
+shop_action_cannot_afford_item		^ryer too poor
+shop_action_cannot_afford_recipe	^ryer too poor for dis too
+shop_action_purchase_item			^yClick to grab dis booty
+shop_action_purchase_recipe			^yClick to furl dis parchment
+shop_action_unavailable				^r'taint at dis shop ya sprog
+
+// END

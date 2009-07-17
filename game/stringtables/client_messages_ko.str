@@ -1,0 +1,170 @@
+error_title						Error
+error_unknown					Unknown error.
+
+disconnect_title				Disconnected
+disconnect_not_host				You must have host privelages to start a game on this server.
+disconnect_server_full			The server is full.
+disconnect_game_in_progress		The game you are attempting join is already in progress.
+disconnect_server_error			Server error.
+disconnect_not_invited			You do not have an invitation to join this private game.
+disconnect_no_cookie			You must be logged in to play on this server.
+disconnect_auth_failed			The server could not authorize your account. Please try logging in again.
+disconnect_unknown				You have been disconnected.
+disconnect_timeout				No response from server.
+disconnect_game_over			The game has ended.
+disconnect_idle					You have been disconnected for being idle.
+disconnect_terminated			You have exceeded the maximum disconnection time and are no longer allowed to rejoin this game.
+disconnect_kicked				You have been kicked from the game by the host.
+
+rejected_invalid_request		Your client sent an invalid connection request.
+rejected_empty_address			The server failed to determine your address.
+rejected_wrong_game				This server is running a different game.
+rejected_wrong_version			Your version does not match the server's.
+rejected_banned					You are banned from this server.
+rejected_invalid_password		Invalid password.
+rejected_server_error			Server Error.
+
+// chat system messages
+chat_connecting					^900* Connecting to chat server...
+chat_reconnecting				^900* Connecting to chat server... (Attempt {attempt} of {maxattempts})
+chat_waiting_verification			^900* Waiting for chat server to verify identity...
+chat_connected					^900* Connected!
+chat_disconnected				^900* Disconnected from chat server.
+chat_reconnecting_delay				^900* Reconnecting in 30 seconds (Attempt {attempt} of {maxattempts}).
+chat_not_connected				^900* You are not connected to the chat server.
+chat_new_channel				^900* Now talking in channel ^090{channel}^900.
+chat_channel_message				^990{sender}:^888 {message}
+chat_channel_message_sent			^444"{name}:^* {message}
+chat_whisper					^099(Whisper from {sender}) ^888{message}
+chat_whisper_sent				^066(Whispered to {target}) ^888{message}
+chat_whisper_buddies				^099<Whispered to Buddies> {message}
+chat_whisper_failed_self			^900* You cannot whisper yourself.
+chat_user_offline				^900* That player is not online.
+chat_im						^882{sender}: ^888{message}
+chat_im_sent					^444{name}: ^888{message}
+chat_im_failed					^900* {target} is not online.
+chat_clan_whisper				^359(Clan) {name}: ^888{message}
+chat_clan_whisper_sent				^458(Clan) {name}: ^888{message}
+chat_clan_whisper_failed			^900* You are not in a clan.
+chat_clan_im					^359{name}: ^888{message}
+chat_clan_im_sent				^458{name}: ^888{message}
+chat_flooding					^900* Message not sent - You are sending too many messages. Please wait several seconds and try again.
+chat_max_channels				^900* You cannot join any more channels at this time, leave another first.
+chat_banned					^900* Disconnected - You are banned from the chat server for {time} minutes.
+chat_banned_connections				^900* Reason: Too many connection attempts.
+chat_banned_flooding				^900* Reason: Flooding.
+chat_banned_unknown				^900* Reason: Unknown.
+chat_banned_reconnect				^900* Attempting reconnection (Attempt {attempt} of {maxattempts}) in {time} seconds."
+chat_info_not_found				^900* The user '{name}' could not be found.
+chat_info_offline				^900* {name} is currently offline, last seen at {seen}.
+chat_info_online_no_channels			^900* {name} is currently online and in no channels.
+chat_info_online_one_channel			^900* {name} is currently online and in the channel '{channel}'.
+chat_info_online_multi_channels			^900* {name} is currently online and in the following channels: {channels}
+chat_info_in_game				^900* {name} is currently online and in the game '{game}'.
+chat_ignored					^900* {name} is now being ignored.
+chat_unignored					^900* {name} is no longer being ignored.
+chat_joining_game				^900* Joining game '{name}'.
+chat_left_game					^900* You have left the game.
+chat_user_info_online				^900* ^990{name}^900 is currently online.
+chat_user_info_offline				^900* ^990{name}^900 is currently offline.
+chat_user_info_in_game				^900* ^990{name}^900 is currently in the game '{game}'.
+chat_adding_buddy				^900* Adding {name} as a buddy...
+chat_failed_buddy_add				^900* Failed to add {target} to your buddy list.
+chat_failed_buddy_add_self			^900* You cannot add yourself as a buddy.
+chat_failed_buddy_add_duplicate			^900* You cannot add yourself as a buddy.
+chat_failed_buddy_add_reason			^900* Failed to add {target} to your buddy list: {reason}
+chat_failed_buddy_remove			^900* Failed to remove {target} from your buddy list.
+chat_failed_buddy_remove_not_found		^900* Failed to remove user from your buddy list: User not found.
+chat_clan_promoting				^900* Promoting clan member {name} to officer...
+chat_failed_clan_promote			^900* Failed to promote {target}.
+chat_failed_clan_promote_cannot_promote		^900* You cannot promote that user.
+chat_failed_clan_promote_generic		^900* Failed to promote user.
+chat_clan_demoting				^900* Demoting clan member {name}...
+chat_failed_clan_demote				^900* Failed to demote {target}.
+chat_failed_clan_demote_cannot_demote		^900* You cannot demote that user.
+chat_failed_clan_demote_generic			^900* Failed to demote user.
+chat_clan_removing				^900* Removing clan member {name}...
+chat_failed_clan_remove				^900* Failed to remove {target} from the clan.
+chat_failed_clan_remove_demote			^900* That user must be demoted before he can be removed.
+chat_failed_clan_remove_generic			^900* Failed to remove user from the clan.
+chat_success_buddy_add				^900* Added {target} to your buddy list.
+chat_success_buddy_remove			^900* Removed {target} from your buddy list.
+chat_success_clan_promote			^900* Promoted user successfully.
+chat_success_clan_demote			^900* Demoted user successfully.
+chat_success_clan_remove			^900* Removed user from the clan.
+
+// chat notifications
+chat_notification_cc_panel			Press F6 to open the Community & Clan Panel.
+chat_notification_buddy_online			{name} is online.
+chat_notification_buddy_offline			{name} is offline.
+chat_notification_buddy_joined_game		{name} has joined the game '{game}'.
+chat_notification_buddy_left_game		{name} has left the game '{game}'.
+chat_notification_clan_online			{name} is online.
+chat_notification_clan_offline			{name} is offline.
+chat_notification_clan_joined_game		{name} has joined the game '{game}'.
+chat_notification_clan_left_game		{name} has left the game '{game}'.
+chat_notification_clan_whisper			(Clan) {name}: {message}
+chat_notification_clan_whisper_sent		(Clan) {name}: {message}
+
+// chat commands
+chat_command_whisper				/whisper
+chat_command_whisper_short			/w
+chat_command_whisper_help			^900*^505 /whisper <name> <message>.
+chat_command_reply				/reply
+chat_command_reply_short			/r
+chat_command_reply_invalid			^900* No one has whispered you!
+chat_command_reply_help				^900*^505 /reply <message>.
+chat_command_buddy				/buddy
+chat_command_buddy_short			/b
+chat_command_buddy_list				list
+chat_command_buddy_list_short			l
+chat_command_buddy_list_message			^900* Listing Buddies...
+chat_command_buddy_list_none			^900* You have no users on your buddy list.
+chat_command_buddy_list_help			^900*^505 /buddy list.
+chat_command_buddy_message			message
+chat_command_buddy_message_short		m
+chat_command_buddy_message_help			^900*^505 /buddy message <message>.
+chat_command_buddy_add				add
+chat_command_buddy_add_short			a
+chat_command_buddy_add_help			^900*^505 /buddy add <nick>.
+chat_command_buddy_delete			delete
+chat_command_buddy_delete_short			d
+chat_command_buddy_delete_help			^900*^505 /buddy delete <nick>.
+chat_command_clan				/clan
+chat_command_clan_short				/c
+chat_command_clan_list				list
+chat_command_clan_list_short			l
+chat_command_clan_list_message			^900* Listing Clan Members...
+chat_command_clan_list_none			^900* You have no users in your clan.
+chat_command_clan_list_help			^900*^505 /clan list.
+chat_command_clan_message			message
+chat_command_clan_message_short			m
+chat_command_clan_message_help			^900*^505 /clan message <message>.
+chat_command_clear				/clear
+chat_command_clear_short			/cl
+chat_command_join				/join
+chat_command_join_short				/j
+chat_command_invite				/invite
+chat_command_invite_short			/i
+chat_command_invite_help			^900*^505 /invite <user>.
+chat_command_ignore				/ignore
+chat_command_ignore_help			^900*^505 /ignore <user>.
+chat_command_unignore				/unignore
+chat_command_unignore_help			^900*^505 /unignore <user>.
+chat_command_help				/help
+chat_command_help_short				/h
+chat_command_character				/
+chat_command_invalid_format			^900* Invalid command format. Proper format is:
+chat_command_invalid_format_multi		^900* Invalid command format. Proper format is one of:
+chat_command_invalid_command			^900* Invalid command. Type {helpcommand} for a list of commands.
+chat_command_help_valid				^900* Valid commands are:
+chat_command_help_whisper			^900*^505 /whisper <nickname> <message>^900  -Whispers to a user.
+chat_command_help_reply				^900*^505 /reply <message>^900               -Replies to last whisper.
+chat_command_help_buddy				^900*^505 /buddy <command> <arguments>^900   -Various buddy-related commands.
+chat_command_help_clan				^900*^505 /clan <command> <arguments>^900    -Various clan-related commands.
+chat_command_help_join				^900*^505 /join <channel>^900                -Joins the specified channel.
+chat_command_help_ignore			^900*^505 /ignore <user>^900                 -Ignores the specified user.
+chat_command_help_unignore			^900*^505 /unignore <user>^900               -Unignores the specified user.
+chat_command_help_clear				^900*^505 /clear^900                         -Clears the chat buffer.
+chat_command_help_invite			^900*^505 /invite <user>^900                 -Invites the specified user to the current game.
+chat_command_help_misc				^900* Type any command in with no arguments for information on how to use it.
