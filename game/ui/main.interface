@@ -922,6 +922,7 @@
 			<instance name="language" code="zh" texture="/ui/elements/flag_china.tga" tooltip="Chinese (coming soon...)" disabled="true" rendermode="grayscale"/>
 			<instance name="language" code="ko" texture="/ui/elements/flag_korea.tga" tooltip="Korean (coming soon...)" disabled="true" rendermode="grayscale"/>
 			<!-- <instance name="language" code="pi" texture="/ui/elements/flag_pirate.tga" tooltip="ARR! (Pirate)"/>-->
+            <instance name="language" code="dota" texture="/ui/elements/flag_pirate.tga" tooltip="DotA (Defence of the Ancients)"/>
 		</panel>
 	</panel>
 
